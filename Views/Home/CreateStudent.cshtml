@@ -1,0 +1,60 @@
+﻿﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "CreateStudent";
+}
+@model Lab3.Models.Student
+
+<h3>Create Student</h3>
+<form asp-controller="Home" asp-action="DisplayStudent" method="post">
+    <table>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                <input type="text" id="FName" name="FName" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <input type="text" id="LName" name="LName" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Student Id:
+            </td>
+            <td>
+                <input type="number" id="StudentId" name="StudentId" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email Address:
+            </td>
+            <td>
+                <input type="email" id="Email" name="Email" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="password" id="Password" name="Password" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Description:
+            </td>
+            <td>
+                <input type="text" height="75" id="Description" multiple name="Description" value="" />
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Create" />
+</form>

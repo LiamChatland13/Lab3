@@ -1,0 +1,15 @@
+﻿﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "SongForm";
+}
+
+<h3>Song Form</h3>
+<form asp-controller="Home" asp-action="Sing" method="post">
+    <table>
+        <tr>
+            <td>Number Of Monkeys: </td>
+            <td><input type="number" name="nMonkeys" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit" />
+</form>

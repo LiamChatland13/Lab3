@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewData["Title"]</title>
+        <link href="~/StyleSheet.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Hi Welcome to My Lab 3!</h1>
+            <p>Liam Chatland</p>
+            @Html.ActionLink("Home", "Index", "Home")
+            <br/>
+            @Html.ActionLink("Show the song!", "SongForm", "Home")
+            <br/>
+            @Html.ActionLink("Students", "CreateStudent", "Home")
+            <div>
+                @RenderBody()
+            </div>
+        </header>
+
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+
+        <footer>
+
+            <h3>What does the Layout do?</h3>
+            <p>
+                The Layout provides pretty much a template<br />
+                that can be used by however many pages you<br />
+                please, this prevents repeating code.
+            </p>
+
+            <h3>Why the files go in certain directories?</h3>
+            <p>
+                The Layout goes in the views/shared directory<br/>
+                because this is the Layout that's shared by <br/> 
+                different controllers so conventionally it <br/>
+                makes sense for it to go in the shared folder.<br/><br/>
+
+                The CSS file goes in the wwwroute directory because,<br/>
+                it's a static file and wwwroot is the only place that<br/>
+                serve a HTTP Request. I tested this by accessing this <br/>
+                URL while my site was running, "http://localhost:5144/StyleSheet.css".<br/>
+            </p>
+        </footer>
+    </body>
+
+
+</html>

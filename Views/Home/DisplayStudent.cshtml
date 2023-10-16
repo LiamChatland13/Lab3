@@ -1,0 +1,38 @@
+﻿@model Lab3.Models.Student
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "DisplayStudent";
+}
+
+<h3>Display Student</h3>
+
+@if (Model != null)
+{
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td>@Model.FName</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td>@Model.LName</td>
+        </tr>
+        <tr>
+            <td>StudentId:</td>
+            <td>@Model.StudentId</td>
+        </tr>
+        <tr>
+            <td>Email Address:</td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>@Model.Password</td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td>@Model.Description</td>
+        </tr>
+    </table>
+
+}

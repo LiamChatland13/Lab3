@@ -1,0 +1,31 @@
+﻿
+@{
+	Layout = "_Layout";
+}
+<p>Number of Monkeys is @ViewData["Monkeys"]</p>
+@for (var i = 50; i >= 0; i--)
+{
+    var gender = "his";
+    @if(i % 2 == 0)
+    {
+        gender = "her";
+    }
+    @if(i != 0)
+    {
+        <p>
+            @i little monkeys jumping on the bed<br />
+            One fell off and bumped @gender head<br />
+            Mama called the doctor and the doctor said<br />
+            "No more monkeys jumping on the bed!",<br /><br />
+        </p>
+    }else
+    {
+        <p>
+            No little monkeys jumping on the bed<br />
+            None fell off and bumped there head<br />
+            Mama called the doctor and the doctor said<br />
+            "Put those monkeys back in bed!"<br /><br />
+        </p>
+    }
+   
+}
